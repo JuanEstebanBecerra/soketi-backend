@@ -1,0 +1,27 @@
+version: '4.2'
+
+services:
+    soketi-nginx:
+        image: nginx:alpine
+        container_name: soketi-nginx
+        volumes:
+            - ../../../:/var/www/app
+            - ./nginx/conf.d/:/etc/nginx/conf.d/
+        environment:
+            APP_HOST: soketi-backend
+            APP_PORT: 9000
+        networks:
+            - soketi-network
+
+    soketi-backend:
+        container_name: soketi-backend
+        build: .
+        volumes:
+            - ../../../:/var/www/app
+        working_dir: /var/www/app
+        networks:
+            - soketi-network
+
+networks:
+    soketi-network:
+        external: true
