@@ -27,7 +27,8 @@
             "Database\\Seeders\\": "database/seeders/",
             "Kernel\\": "src/Kernel",
             "AuthenticationManager\\": "src/AuthenticationManager/src",
-            "SoketiConnection\\": "src/SoketiConnection/src"
+            "SoketiConnection\\": "src/SoketiConnection/src",
+            "SoketiValidationManager\\": "src/SoketiValidationManager/src"
         }
     },
     "autoload-dev": {

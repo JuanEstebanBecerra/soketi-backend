@@ -27,9 +27,6 @@ class AuthenticationServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Broadcast::routes(['prefix' => 'api', 'middleware' => ['auth:sanctum']]);
-        require __DIR__ . '/../Routes/channels.php';
-
         $this->loadRoutes();
     }
 
