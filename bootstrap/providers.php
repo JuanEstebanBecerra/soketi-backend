@@ -2,5 +2,6 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-    \SoketiConnection\Infrastructure\ServiceLayer\Providers\SoketiConnectionServiceProvider::class
+    AuthenticationManager\Infrastructure\ServiceLayer\Providers\AuthenticationServiceProvider::class,
+    SoketiConnection\Infrastructure\ServiceLayer\Providers\SoketiConnectionServiceProvider::class,
 ];
